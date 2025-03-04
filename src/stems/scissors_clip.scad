@@ -1,5 +1,5 @@
 module scissors_clip_steam() {
-    translate(v = [0, ($bottom_key_height-$clip_height-0.7)/2, $total_depth-$keytop_thickness-$dish_depth]) {
+    translate(v = [0, ($bottom_key_height-$clip_height-0.7)/2, $total_depth-$keytop_thickness-$dish_depth]+$clip_offset) {
         translate(v = [0, 0, -$clip_depth/2]) {
             translate(v = [$clip_horizontal_distance/2, 0]) scissors_clip();
             translate(v = [-$clip_horizontal_distance/2, 0]) scissors_clip();

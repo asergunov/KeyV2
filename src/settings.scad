@@ -280,3 +280,6 @@ $clip_pocket_inner_distance = 11.5;
 $clip_pocket_width = 1.7;
 $clip_pocket_height= 2;
 $clip_pocket_depth = 1.7;
+
+// Offset of the clip
+$clip_offset = [0,0,0];
