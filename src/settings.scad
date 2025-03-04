@@ -249,3 +249,7 @@ $corner_smoothing_surface_function = function(x,y) 1;
 // y=x revolved around the y axis
 /* $surface_function =  */
 /* $surface_function =  */
+
+
+$label_valign = "center";
+$label_halign = "center";

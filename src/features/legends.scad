@@ -3,7 +3,7 @@ module keytext(text, position, font_size, font_face, depth) {
   hoffset = (top_total_key_height()/3.5) * -position[1];
   translate([woffset, hoffset, -depth]){
     color($tertiary_color) linear_extrude(height=$dish_depth + depth){
-      text(text=text, font=font_face, size=font_size, halign="center", valign="center");
+      text(text=text, font=font_face, size=font_size, halign=$label_valign, valign=$label_halign);
     }
   }
 }
