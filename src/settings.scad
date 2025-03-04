@@ -250,6 +250,7 @@ $corner_smoothing_surface_function = function(x,y) 1;
 /* $surface_function =  */
 /* $surface_function =  */
 
-
+// label text vertical alignment
 $label_valign = "center";
+// label text horizontal allignment
 $label_halign = "center";
