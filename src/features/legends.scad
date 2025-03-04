@@ -2,7 +2,8 @@ module keytext(text, position, font_size, font_face, depth) {
   woffset = (top_total_key_width()/3.5) * position[0];
   hoffset = (top_total_key_height()/3.5) * -position[1];
   translate([woffset, hoffset, -depth]){
-    color($tertiary_color) linear_extrude(height=$dish_depth + depth){
+    height = $dish_depth + depth + ($rounded_key ? $minkowski_radius : 0);
+    color($tertiary_color) linear_extrude(height=height){
       text(text=text, font=font_face, size=font_size, halign=$label_valign, valign=$label_halign);
     }
   }
