@@ -5,7 +5,7 @@ include <stems/alps.scad>
 include <stems/filled.scad>
 include <stems/cherry_stabilizer.scad>
 include <stems/choc.scad>
-include <stems/sccissors_clip.scad>
+include <stems/scissors_clip.scad>
 
 
 //whole stem, alps or cherry, trimmed to fit
@@ -26,8 +26,8 @@ module stem(stem_type, depth, slop, throw){
       choc_stem(depth, slop, throw);
     } else if (stem_type == "disable") {
       children();
-    } else if(stem_type == "sccissors_clip") {
-      sccissors_clip_steam();
+    } else if(stem_type == "scissors_clip") {
+      scissors_clip_steam();
     } else {
       echo("Warning: unsupported $stem_type: ");
       echo(stem_type);

@@ -213,7 +213,7 @@ module inside_features() {
 module stems_and_stabilizers() {
   translate([0, 0, $stem_inset]) {
     if ($stabilizer_type != "disable") stems_for($stabilizers, $stabilizer_type);
-    if ($stem_type != "disable" && $stem_type != "sccissors_clip") stems_for($stem_positions, $stem_type);
+    if ($stem_type != "disable" && $stem_type != "scissors_clip") stems_for($stem_positions, $stem_type);
   }
 }
 
@@ -251,7 +251,7 @@ module key(inset=false) {
         children();
       };
     }
-    if ($stem_type == "sccissors_clip") stems_for($stem_positions, $stem_type);
+    if ($stem_type == "scissors_clip") stems_for($stem_positions, $stem_type);
   }
 
   // semi-hack to make sure negative inset stems don't poke through the top of the keycap
