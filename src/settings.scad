@@ -261,6 +261,8 @@ $label_halign = "center";
 
 // bottom arc height for rounded_bottom_rouned_square and rounded_bottom_square $key_shape
 $bottom_radius_heght = 1;
+// disables rounding at right of the button
+$rounded_square_sharp_right = false;
 
 /* [Scissors clip] */
 

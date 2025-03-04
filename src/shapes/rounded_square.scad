@@ -5,6 +5,9 @@ module rounded_square_shape(size, delta, progress, center = true) {
   offset(r=$corner_radius, $fa=360/$shape_facets){
     square_shape([size.x - $corner_radius*2, size.y - $corner_radius*2], delta, progress);
   }
+  if($rounded_square_sharp_right) {
+    translate(v = [size.x/4, 0]) square_shape([size.x/2, size.y], delta, progress);
+  }
 }
 
 // for skin
