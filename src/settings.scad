@@ -84,7 +84,7 @@ $keycap_rotation = 0;
 /* [Shape] */
 
 // Key shape type, determines the shape of the key. default is 'rounded square'
-$key_shape_type = "rounded_square";
+$key_shape_type = "rounded_square"; // [rounded_square, iso_enter, sculpted_square, flat_sided_square, square, oblong, hexagon, octagon, circular, rounded_bottom_square, rounded_bottom_rouned_square]
 // ISO enter needs to be linear extruded NOT from the center when not using skin. this tells the program how far up 'not from the center' is
 $linear_extrude_height_adjustment = 0;
 // How many slices will be made, to approximate curves on corners. Leave at 1 if you are not curving corners
@@ -254,3 +254,6 @@ $corner_smoothing_surface_function = function(x,y) 1;
 $label_valign = "center";
 // label text horizontal allignment
 $label_halign = "center";
+
+// bottom arc height for rounded_bottom_rouned_square and rounded_bottom_square $key_shape
+$bottom_radius_heght = 1;

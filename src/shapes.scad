@@ -5,6 +5,7 @@ include <shapes/rounded_square.scad>
 include <shapes/square.scad>
 include <shapes/oblong.scad>
 include <shapes/regular_polygon.scad>
+include <shapes/rounded_bottom.scad>
 
 // size: at progress 0, the shape is supposed to be this size
 // delta: at progress 1, the keycap is supposed to be size - delta
@@ -30,6 +31,10 @@ module key_shape(size, delta, progress = 0) {
     regular_polygon_shape(size, delta, progress, sides=8);
   } else if ($key_shape_type == "circular") {
     regular_polygon_shape(size, delta, progress, sides=36);
+  } else if ($key_shape_type == "rounded_bottom_square"){
+    rounded_bottom_square_shape(size, delta, progress);
+  } else if ($key_shape_type == "rounded_bottom_rouned_square"){
+    rounded_bottom_rouned_square_shape(size, delta, progress);
   } else {
     echo("Warning: unsupported $key_shape_type");
   }
