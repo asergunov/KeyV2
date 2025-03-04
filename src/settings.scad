@@ -4,7 +4,7 @@
 $key_length = 1.0; // Range not working in thingiverse customizer atm [1:0.25:16]
 
 // What type of stem you want. Most people want Cherry.
-$stem_type = "cherry";  // [cherry, alps, rounded_cherry, box_cherry, filled, disable]
+$stem_type = "cherry";  // [cherry, alps, rounded_cherry, box_cherry, filled, sccissors_clip, disable]
 
 // The stem is the hardest part to print, so this variable controls how much 'slop' there is in the stem
 // if your keycaps stick in the switch raise this value
@@ -250,10 +250,33 @@ $corner_smoothing_surface_function = function(x,y) 1;
 /* $surface_function =  */
 /* $surface_function =  */
 
+/* [Label alignment] */
+
 // label text vertical alignment
 $label_valign = "center";
 // label text horizontal allignment
 $label_halign = "center";
 
+/* [Bottom radius shape] */
+
 // bottom arc height for rounded_bottom_rouned_square and rounded_bottom_square $key_shape
 $bottom_radius_heght = 1;
+
+/* [Sccissors clip] */
+
+$clip_width = 0.8;
+$clip_height = 2.1;
+$clip_depth = 1.4;
+// distance between center of clips
+$clip_horizontal_distance = 7;
+$clip_hole_diameter = 0.9;
+$clip_hole_click_diameter = 0.6;
+
+// distance between clips and pockets center
+$clip_to_pocket = 11;
+
+// inner distance between clip pockets
+$clip_pocket_inner_distance = 11.5;
+$clip_pocket_width = 1.7;
+$clip_pocket_height= 2;
+$clip_pocket_depth = 1.7;

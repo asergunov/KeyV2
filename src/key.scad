@@ -213,7 +213,7 @@ module inside_features() {
 module stems_and_stabilizers() {
   translate([0, 0, $stem_inset]) {
     if ($stabilizer_type != "disable") stems_for($stabilizers, $stabilizer_type);
-    if ($stem_type != "disable") stems_for($stem_positions, $stem_type);
+    if ($stem_type != "disable" && $stem_type != "sccissors_clip") stems_for($stem_positions, $stem_type);
   }
 }
 
@@ -235,20 +235,23 @@ module outer_total_shape(inset=false) {
 // The final, penultimate key generation function.
 // takes all the bits and glues them together. requires configuration with special variables.
 module key(inset=false) {
-  difference(){
-    outer_total_shape(inset) {
-      children();
-    };
+  union() {
+    difference() {
+      outer_total_shape(inset) {
+        children();
+      };
 
-    if ($inner_shape_type != "disable") {
-      translate([0,0,-SMALLEST_POSSIBLE]) { // avoids moire
-        inner_total_shape();
+      if ($inner_shape_type != "disable") {
+        translate([0,0,-SMALLEST_POSSIBLE]) { // avoids moire
+          inner_total_shape();
+        }
       }
-    }
 
-    subtractive_features(inset) {
-      children();
-    };
+      subtractive_features(inset) {
+        children();
+      };
+    }
+    if ($stem_type == "sccissors_clip") stems_for($stem_positions, $stem_type);
   }
 
   // semi-hack to make sure negative inset stems don't poke through the top of the keycap
