@@ -24,7 +24,7 @@ $total_depth = 2;
 $stem_type = "scissors_clip";
 $stem_support_height = 8;
 // distance between center of clips
-$clip_horizontal_distance = 5.5;
+$clip_horizontal_distance = 5.8;
 $clip_pocket_inner_distance = 10.5;
 $clip_pocket_width = 1.55;
 // distance between clips and pockets center
@@ -38,5 +38,5 @@ $minkowski_radius=0.5;
 $rounded_square_sharp_right = true;
 
 $label_valign = "left";
-mirror([1,0]) 
+//mirror([1,0]) 
 scissors_clip_offset([0.5, -0.4, 0]) legend($text, position=[-1.3, -.2], size=4) key();
