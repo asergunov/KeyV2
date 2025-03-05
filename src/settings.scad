@@ -267,7 +267,7 @@ $rounded_square_sharp_right = false;
 /* [Scissors clip] */
 
 $clip_width = 0.8;
-$clip_height = 2.1;
+$clip_height = 2.4;
 $clip_depth = 1.4;
 // distance between center of clips
 $clip_horizontal_distance = 7;
@@ -281,7 +281,9 @@ $clip_to_pocket = 11;
 $clip_pocket_inner_distance = 11.5;
 $clip_pocket_width = 1.7;
 $clip_pocket_height= 2;
-$clip_pocket_depth = 1.7;
+$clip_pocket_depth = 1.5;
+
+$clip_pocket_inner_size = [1.2, 1.5, 0.9];
 
 // Offset of the clip
-$clip_offset = [0,0,0];
+$clip_offset = [0,-$clip_height/2,0];

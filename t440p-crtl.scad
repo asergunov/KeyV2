@@ -22,9 +22,9 @@ $top_tilt = 0;
 $clip_to_pocket=10.8;
 $total_depth = 2;
 $stem_type = "scissors_clip";
-// $rounded_key=true;
+$rounded_key=true;
 $minkowski_radius=0.5;
-$text="Ctrl";
+$text="";
 
 $label_valign = "left";
-legend($text, position=[-1.5, -.2], size=3) key();
+scissors_clip_offset([0, -3+2.4, 0]) legend($text, position=[-1.5, -.2], size=3) key();
